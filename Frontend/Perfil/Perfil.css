@@ -1,0 +1,838 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header Styles */
+.header {
+    background-color: #fff;
+    border-bottom: 0.0625rem solid #e5e5e5;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #294655;
+}
+
+.profile-btn {
+    background-color: #294655;
+    color: #fff !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover,
+.profile-btn.active {
+    background-color: #1e3a4a;
+}
+
+/* Profile Section */
+.profile-section {
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+.profile-content {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+/* User Info - Left Side */
+.user-info {
+    flex: 0 0 auto;
+    text-align: center;
+    max-width: 20rem;
+}
+
+.profile-picture {
+    margin-bottom: 2rem;
+}
+
+/* Dog Avatar */
+.dog-avatar {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+}
+
+.dog-ears {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ear {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1.5rem solid transparent;
+    border-right: 1.5rem solid transparent;
+    border-bottom: 3rem solid #8B4513;
+}
+
+.left-ear {
+    left: -2rem;
+    transform: rotate(-15deg);
+}
+
+.right-ear {
+    right: -2rem;
+    transform: rotate(15deg);
+}
+
+.dog-face {
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12rem;
+    height: 10rem;
+    background-color: #D2691E;
+    border-radius: 50%;
+}
+
+.dog-eyes {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 1.5rem 0;
+}
+
+.eye {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.dog-nose {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #000;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+
+.dog-mouth {
+    width: 2.5rem;
+    height: 0.5rem;
+    background-color: #000;
+    margin: 0 auto;
+    border-radius: 0.25rem;
+}
+
+.user-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.career-btn {
+    background-color: #294655;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.career-btn:hover {
+    background-color: #1e3a4a;
+}
+
+.user-details {
+    text-align: left;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+.detail-item i {
+    color: #294655;
+    width: 1.25rem;
+}
+
+/* Bio Section - Right Side */
+.bio-section {
+    flex: 1;
+}
+
+.bio-card {
+    border: 0.0625rem solid #000;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    background-color: #fff;
+}
+
+/* Peeking Cat */
+.peeking-cat {
+    position: absolute;
+    top: -1rem;
+    right: 1rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.cat-head {
+    position: relative;
+}
+
+.cat-ears {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cat-ear {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 0.75rem solid transparent;
+    border-right: 0.75rem solid transparent;
+    border-bottom: 1.5rem solid #294655;
+}
+
+.left-cat-ear {
+    left: -1rem;
+    transform: rotate(-15deg);
+}
+
+.right-cat-ear {
+    right: -1rem;
+    transform: rotate(15deg);
+}
+
+.cat-face {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: 3rem;
+    background-color: #294655;
+    border-radius: 2rem;
+}
+
+.cat-eyes {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0.5rem 0;
+}
+
+.cat-eye {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.cat-nose {
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0.25rem auto;
+}
+
+.cat-paws {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.paw {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #294655;
+    border-radius: 50%;
+}
+
+.bio-content {
+    margin-top: 3rem;
+}
+
+.bio-header {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.bio-text p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.edit-bio-btn {
+    background-color: #294655;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.edit-bio-btn:hover {
+    background-color: #1e3a4a;
+}
+
+/* Statistics Section */
+.statistics-section {
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.stats-container {
+    background-color: #0d9488;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.stats-content {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+}
+
+.stat-box {
+    background-color: #fff;
+    border: 0.125rem solid #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    flex: 1;
+}
+
+.stat-box h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.stat-box p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.motivation {
+    color: #0d9488 !important;
+    font-weight: 600;
+}
+
+.interests ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.interests li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.interests li::before {
+    content: '•';
+    color: #0d9488;
+    position: absolute;
+    left: 0;
+}
+
+/* Progress Section */
+.progress-section {
+    text-align: center;
+    color: #fff;
+}
+
+.progress-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.progress-circle {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+}
+
+.progress-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#20d4d4 0deg 315deg, #fff 315deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.progress-ring::before {
+    content: '';
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    background-color: #0d9488;
+    border-radius: 50%;
+}
+
+.progress-text-inside {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    z-index: 1;
+    position: relative;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+.skills-section .section-title {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.skill-btn {
+    background-color: #0d9488;
+    color: #fff;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.skill-btn:hover {
+    background-color: #0f766e;
+}
+
+.skills-note {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Community Section */
+.community-section {
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+.community-description {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.community-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.community-card {
+    background-color: #fff;
+    border: 0.0625rem solid #e5e5e5;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.community-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.community-icon {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Robot Head with Flower */
+.robot-head {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+}
+
+.robot-face {
+    width: 5rem;
+    height: 5rem;
+    background-color: #6b7280;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.robot-eyes {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0.75rem 0;
+}
+
+.robot-eye {
+    width: 1rem;
+    height: 1rem;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.robot-mouth {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #000;
+    margin: 1rem auto 0;
+    border-radius: 0.125rem;
+}
+
+.flower {
+    position: absolute;
+    top: -1rem;
+    right: -0.5rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.flower-center {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #fbbf24;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.petal {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: #ec4899;
+    border-radius: 50%;
+}
+
+.petal-1 { top: 0; left: 50%; transform: translateX(-50%); }
+.petal-2 { top: 50%; right: 0; transform: translateY(-50%); }
+.petal-3 { bottom: 0; left: 50%; transform: translateX(-50%); }
+.petal-4 { top: 50%; left: 0; transform: translateY(-50%); }
+
+/* Headdress */
+.headdress {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+}
+
+.headdress-base {
+    width: 5rem;
+    height: 1rem;
+    background-color: #8B4513;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.feather {
+    position: absolute;
+    width: 0.125rem;
+    height: 3rem;
+    background-color: #8B4513;
+    border-radius: 0.0625rem;
+}
+
+.feather-1 { top: 0; left: 1rem; transform: rotate(-15deg); }
+.feather-2 { top: 0; left: 2.5rem; transform: rotate(0deg); }
+.feather-3 { top: 0; right: 1rem; transform: rotate(15deg); }
+
+/* Wheelchair Person */
+.wheelchair-person {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+}
+
+.wheelchair {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wheelchair-seat {
+    width: 3rem;
+    height: 1rem;
+    background-color: #6b7280;
+    border-radius: 0.5rem;
+}
+
+.wheelchair-wheel {
+    width: 2rem;
+    height: 2rem;
+    border: 0.25rem solid #6b7280;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.person {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.person-head {
+    width: 2rem;
+    height: 2rem;
+    background-color: #fbbf24;
+    border-radius: 50%;
+    position: relative;
+}
+
+.graduation-cap {
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cap-base {
+    width: 2.5rem;
+    height: 1rem;
+    background-color: #0d9488;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.cap-tassel {
+    width: 0.125rem;
+    height: 1rem;
+    background-color: #fbbf24;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.community-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.learn-more {
+    color: #0d9488;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: #0f766e;
+}
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    border-top: 0.0625rem solid #e5e5e5;
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    color: #666;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #0d9488;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact p {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 64rem) {
+    .profile-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stats-content {
+        flex-direction: column;
+    }
+    
+    .community-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 48rem) {
+    .community-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .user-name {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
