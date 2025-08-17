@@ -49,23 +49,25 @@ body {
 }
 
 .navigation a {
-    text-decoration: none;
+    text-decoration: none;                     /* Quitamos el underline */
     color: #333;
     font-weight: 500;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;     /* Línea invisible al inicio */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transición suave */
 }
 
-.navigation a:hover,
-.navigation a.active {
-    color: #008080;
+.navigation a:hover {
+    color: rgb(37, 57, 133);
+    border-bottom-color: rgb(37, 57, 133);    /* Aparece la línea suavemente */
 }
+
 
 .profile-btn {
     background-color: #1e3a8a;
     color: #fff !important;
     padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
@@ -112,33 +114,48 @@ body {
 .course-card {
     background: #fff;
     border: 0.0625rem solid #e5e5e5;
-    border-radius: 1rem;
+    border-radius: 3.25rem 3.25rem 1rem 1rem; 
+    /* orden: top-left, top-right, bottom-right, bottom-left */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .course-card:hover {
     transform: translateY(-0.25rem);
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .course-image {
-    width: 100%;
-    height: 12rem;
-    border-radius: 0.75rem;
+    height: 12.5rem;
+    width: 91.5%;
+    border-radius: 3.125rem;
+    margin: .75rem;
+}
+
+.course-imageS {
+    height: 0;
+    padding-bottom: 58.7%; /* Mantiene la proporción 21.3:12.5 (58.7%) */
+    width: 93.5%;
+    border-radius: 3.125rem;
     margin: 0.75rem;
+    position: relative;
+    flex-shrink: 0;
 }
 
-.light-teal {
-    background-color: #20d4d4;
+.light-blue {
+    background-color: #38708D;
 }
 
-.dark-teal {
-    background-color: #0d9488;
+.dark-blue {
+    background-color: #294655;
 }
 
 .course-info {
     padding: 0 0.75rem 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .course-info h3 {
@@ -233,70 +250,6 @@ body {
     flex: 0 0 auto;
 }
 
-.cat-character {
-    position: relative;
-    width: 8rem;
-    height: 8rem;
-}
-
-.lightbulb-head {
-    width: 6rem;
-    height: 6rem;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 1rem;
-}
-
-.glasses {
-    width: 4rem;
-    height: 1.5rem;
-    border: 0.25rem solid #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 2rem;
-    left: 1.5rem;
-}
-
-.glasses::before,
-.glasses::after {
-    content: '';
-    position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 0.25rem solid #fff;
-    border-radius: 50%;
-}
-
-.glasses::before {
-    left: -0.25rem;
-}
-
-.glasses::after {
-    right: -0.25rem;
-}
-
-.pointing-finger {
-    width: 0.5rem;
-    height: 2rem;
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    right: 2rem;
-    border-radius: 0.25rem;
-}
-
-.pointing-finger::before {
-    content: '';
-    position: absolute;
-    top: -0.5rem;
-    right: -0.25rem;
-    width: 1rem;
-    height: 0.5rem;
-    background-color: #fff;
-    border-radius: 0.25rem;
-}
 
 .banner-text {
     text-align: left;
@@ -320,6 +273,30 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     opacity: 1;
+}
+
+/* Estilos para la imagen del gato idea */
+#gato-idea {
+    width: 9rem;
+    height: 9rem;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 0.75rem;
+}
+
+/* Contenedor para mostrar el logro con gato y número */
+.achievement-display {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.achievement-display h3 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
 }
 
 /* Footer */

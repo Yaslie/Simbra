@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+    scroll-behavior: smooth; /* Scroll suave para navegación */
 }
 
 .container {
@@ -354,16 +355,65 @@ body {
 
 /* Statistics Section */
 .statistics-section {
-    background-color: #fff;
-    padding: 4rem 0;
+    padding: 6rem 0 4rem 0; /* Más padding arriba para compensar el header */
+    scroll-margin-top: 8rem; /* Offset para el header sticky */
+    background-color: #f8f9fa; /* Fondo sutil para distinguir la sección */
+    border-radius: 1rem;
+    margin: 2rem 0;
 }
 
-.section-title {
+.statistics-section .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #000;
     margin-bottom: 3rem;
+    color: #000;
     text-align: center;
+    position: relative;
+}
+
+.statistics-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: 0.25rem;
+    background-color: #294655;
+    border-radius: 0.125rem;
+}
+
+/* Efecto de resaltado cuando se navega a la sección */
+.statistics-section:target {
+    animation: highlightSection 1s ease-in-out;
+}
+
+@keyframes highlightSection {
+    0% {
+        background-color: #f8f9fa;
+    }
+    50% {
+        background-color: #e3f2fd;
+    }
+    100% {
+        background-color: #f8f9fa;
+    }
+}
+
+.statistics-section:target .section-title {
+    animation: highlightTitle 1s ease-in-out;
+}
+
+@keyframes highlightTitle {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .stats-container {
