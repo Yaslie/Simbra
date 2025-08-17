@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simbra - Plataforma de Aprendizaje</title>
-    <link rel="stylesheet" href="Cursos.css">
+    <link rel="stylesheet" href="../../static/css/Cursos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
@@ -17,10 +17,10 @@
             </div>
             <nav class="navigation">
                 <ul>
-                    <li><a href="../Home/index.html" class="active">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="#inicio-cursos">Mis cursos</a></li>
-                    <li><a href="../Oportunidades/index.html">Oportunidades</a></li>
-                    <li><a href="../Perfil/index.html" class="profile-btn">Perfil</a></li>
+                    <li><a href="/oportunidades">Oportunidades</a></li>
+                    <li><a href="/perfil" class="profile-btn">Perfil</a></li>
                 </ul>
             </nav>
         </div>
@@ -120,16 +120,16 @@
             <section class="progress-section">
                 <h2 class="section-title">¿Quieres conocer tu avance?</h2>
                 <div class="progress-links">
-                    <a href="../Perfil/index.html#statistics-section" class="profile-link">Consulta tus estadísticas en tu perfil →</a>
+                    <a href="{{ url_for('perfil') }}#statistics-section" class="profile-link">Consulta tus estadísticas en tu perfil →</a>
                 </div>
                 <p class="spoiler-text">Pero te tenemos un pequeño spoiler...</p>
                 
                 <!-- Progress Banner --> 
                 <div class="progress-banner">
                     <div class="banner-content">
-                        <img src="../img/gato-idea.png" width="500rem" height="500rem" >
-                        </div>
-                        <div class="banner-text">
+                        <img src="../../static/img/gato-idea.png" width="500rem" height="500rem" >
+                    </div>
+                    <div class="banner-text">
                             <p>En el último mes haz completado</p>
                             <h3> 52 cursos</h3>
                             <p class="encouragement">¡Sigue así!</p>
