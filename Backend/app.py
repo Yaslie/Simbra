@@ -18,5 +18,9 @@ def oportunidades():
 def perfil():
     return render_template("Perfil/index.html")
 
+@app.route("/miscursos")
+def miscursos():
+    return render_template("MisCursos/index.html")
+
 if __name__ == "__main__":
     app.run(debug=True, host="127.0.0.1", port=5000)
