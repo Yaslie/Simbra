@@ -199,6 +199,7 @@ body {
     padding: 4rem 0;
     scroll-margin-top: 4.5rem; /* Offset para scroll suave */
     transition: all 0.3s ease;
+
 }
 
 .section-title {
@@ -214,6 +215,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
+.opportunity-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;}
 
 .opportunity-card {
     background: #fff;
