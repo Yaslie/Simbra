@@ -394,13 +394,19 @@ margin-bottom: -2rem;
 }
 
 .footer-social a {
-    color: #fff;
+    color: #fff !important;
     font-size: 1.5rem;
     transition: opacity 0.3s ease;
+    text-decoration: none;
 }
 
 .footer-social a:hover {
     opacity: 0.8;
+    color: #fff !important;
+}
+
+.footer-social i {
+    color: #fff !important;
 }
 
 /* Responsive Design */
