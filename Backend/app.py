@@ -4,7 +4,19 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")  # Solo el nombre del archivo
+    return render_template("Home/index.html")
+
+@app.route("/cursos")
+def cursos():
+    return render_template("Cursos/index.html")
+
+@app.route("/oportunidades")
+def oportunidades():
+    return render_template("Oportunidades/index.html")
+
+@app.route("/perfil")
+def perfil():
+    return render_template("Perfil/index.html")
 
 if __name__ == "__main__":
     app.run(debug=True, host="127.0.0.1", port=5000)

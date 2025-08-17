@@ -1,0 +1,499 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    scroll-behavior: smooth; /* Scroll suave para navegación */
+}
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header Styles */
+.header {
+    background-color: #fff;
+    border-bottom: 0.0625rem solid #e5e5e5;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #294655;
+}
+
+.profile-btn {
+    background-color: #294655;
+    color: #fff !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover {
+    background-color: #1e3a4a;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #294655;
+    color: #fff;
+    min-height: 50rem;
+    margin-top: -10rem;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0rem;
+    height: 100%;
+    min-height: 40rem;
+}
+
+
+.hero-text h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    margin-top: 15rem;
+}
+
+.cta-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.cta-link:hover {
+    opacity: 0.8;
+}
+
+.hero-illustration {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-illustration img {
+    max-height: 50rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+/* SIMBRA Section */
+.simbra-section {
+    background-color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.simbra-header h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.simbra-header p {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 8rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    min-height: 20rem;
+}
+
+.barra-separadora {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #294655;
+}
+
+.info-card {
+    background: #fff;
+    border: 0.0625rem solid #e5e5e5;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 15rem;
+    background-color: #f3f4f6;
+    position: relative;
+}
+
+.growth-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 8rem;
+    background-color: #294655;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.connectivity-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 8rem;
+    background-color: #294655;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.construction-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 8rem;
+    background-color: #294655;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.card-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Statistics Section */
+.statistics-section {
+    background-color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.statistics-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 3rem;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.statistics-content {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.statistics-content p {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Mission Section */
+.mission-section {
+    background-color: #294655;
+    padding: 6rem 0;
+    color: #fff;
+}
+
+.mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.mission-question h2 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 23rem;
+}
+
+.highlight {
+    font-style: italic;
+    font-weight: 30;
+}
+
+.mission-text {
+    flex: 1;
+    max-width: 40rem;
+}
+
+.mission-text p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* Differences Section */
+.differences-section {
+    background-color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.differences-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.differences-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 70rem;
+    margin: 0 auto 4rem;
+}
+
+.difference-column {
+    padding: 2rem;
+    text-align: left;
+    border: 0.125rem solid #e5e5e5;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.difference-column:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.25rem);
+}
+
+.difference-column p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.7;
+}
+
+.differences-illustration {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.gatoConstructor{
+margin-top: -22rem;
+margin-left: 34rem;
+margin-bottom: -2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #294655;
+    padding: 3rem 0;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.footer-copyright p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    color: #fff !important;
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    opacity: 0.8;
+    color: #fff !important;
+}
+
+.footer-social i {
+    color: #fff !important;
+}
+
+/* Responsive Design */
+@media (max-width: 64rem) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 4rem;
+    }
+    
+    .hero-illustration img {
+        max-height: 25rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 80rem;
+    }
+    
+    .mission-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .differences-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .hero-text h2 {
+        font-size: 3rem;
+    }
+    
+    .hero-illustration img {
+        max-height: 20rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 60rem;
+    }
+    
+    .simbra-header h2 {
+        font-size: 3rem;
+    }
+    
+    .mission-question h2 {
+        font-size: 2.5rem;
+    }
+    
+    .differences-content {
+        gap: 1rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Párrafo objetivo para el scroll */
+#base-firme-futuro {
+    scroll-margin-top: -10rem; /* Aumentado para que baje más */
+    transition: all 0.3s ease;
+}
+
+/* Sección home para el scroll */
+#home-section {
+    scroll-margin-top: 2rem; /* Offset para la sección home */
+    transition: all 0.3s ease;
+}
