@@ -79,6 +79,8 @@ body {
 .profile-section {
     background-color: #fff;
     padding: 4rem 0;
+    scroll-margin-top: 6rem; /* Aumentado para asegurar visibilidad */
+    transition: all 0.3s ease;
 }
 
 .profile-content {

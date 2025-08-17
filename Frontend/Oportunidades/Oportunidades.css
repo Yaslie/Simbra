@@ -79,6 +79,8 @@ body {
     background-color: #fff;
     padding: 3.4rem 0;
     color: #333;
+    scroll-margin-top: 2rem; /* Offset para scroll suave hacia arriba */
+    transition: all 0.3s ease;
 }
 .hero-image {
     width: 30rem;

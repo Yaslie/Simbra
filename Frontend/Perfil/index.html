@@ -20,14 +20,14 @@
                     <li><a href="../Home/index.html">Home</a></li>
                     <li><a href="../Cursos/index.html">Mis cursos</a></li>
                     <li><a href="../Oportunidades/index.html">Oportunidades</a></li>
-                    <li><a href="#" class="profile-btn active">Perfil</a></li>
+                    <li><a href="#inicio-perfil" class="profile-btn active">Perfil</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Main Profile Section -->
-    <section class="profile-section">
+    <section class="profile-section" id="inicio-perfil">
         <div class="container">
             <div class="profile-content">
                 <!-- Left Side - User Information -->
@@ -266,6 +266,37 @@
                 style.remove();
             }, 3000);
         }
+    </script>
+
+    <!-- JavaScript para scroll suave mejorado -->
+    <script>
+        // Función para scroll suave mejorado
+        function smoothScrollTo(targetId) {
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                });
+            }
+        }
+
+        // Agregar evento click a todos los enlaces internos
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM cargado, buscando enlaces internos...');
+            const internalLinks = document.querySelectorAll('a[href^="#"]');
+            console.log('Enlaces internos encontrados:', internalLinks.length);
+            
+            internalLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    console.log('Haciendo clic en enlace interno:', targetId);
+                    smoothScrollTo(targetId);
+                });
+            });
+        });
     </script>
 </body>
 </html>
