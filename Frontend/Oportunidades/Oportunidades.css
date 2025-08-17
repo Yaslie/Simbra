@@ -80,7 +80,12 @@ body {
     padding: 6rem 0;
     color: #333;
 }
-
+.hero-image {
+    width: 30rem;
+    height: auto;
+    margin-left: -3rem; /* mueve la imagen a la izquierda */
+    display: block;
+}
 .hero-content {
     display: flex;
     justify-content: space-between;
