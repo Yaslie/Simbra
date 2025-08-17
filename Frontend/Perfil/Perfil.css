@@ -45,7 +45,7 @@ body {
 .navigation ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 4rem;
     align-items: center;
 }
 
@@ -53,7 +53,7 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.3rem;
     transition: color 0.3s ease;
 }
 
@@ -71,8 +71,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.profile-btn:hover,
-.profile-btn.active {
+.profile-btn:hover {
     background-color: #1e3a4a;
 }
 
@@ -510,7 +509,7 @@ body {
 }
 
 .stat-box p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #666;
     margin-bottom: 0.5rem;
 }
@@ -526,7 +525,7 @@ body {
 }
 
 .interests li {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #666;
     margin-bottom: 0.5rem;
     padding-left: 1rem;
@@ -626,7 +625,7 @@ body {
 
 .skills-note {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #666;
     font-style: italic;
 }
@@ -649,7 +648,7 @@ body {
 
 .community-description {
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 1.3rem;
     color: #666;
     margin-bottom: 3rem;
     max-width: 60rem;
@@ -872,9 +871,9 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #fff;
-    border-top: 0.0625rem solid #e5e5e5;
+    background-color: #294655;
     padding: 3rem 0;
+    color: #fff;
 }
 
 .footer-content {
@@ -886,7 +885,11 @@ body {
 .footer-logo h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: #000;
+}
+
+.footer-copyright p {
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
 .footer-social {
@@ -895,23 +898,19 @@ body {
 }
 
 .footer-social a {
-    color: #666;
-    font-size: 1.25rem;
-    transition: color 0.3s ease;
+    color: #fff !important;
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
 }
 
 .footer-social a:hover {
-    color: #0d9488;
+    opacity: 0.8;
+    color: #fff !important;
 }
 
-.footer-contact {
-    text-align: right;
-}
-
-.footer-contact p {
-    color: #666;
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
+.footer-social i {
+    color: #fff !important;
 }
 
 /* Responsive Design */
