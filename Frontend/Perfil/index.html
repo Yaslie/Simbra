@@ -86,14 +86,23 @@
                         </div>
                         <div class="bio-content">
                             <div class="bio-header">Steph · 20 años · she/her</div>
-                            <div class="bio-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="bio-text" id="bio-text">
+                                <p id="bio-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
-                            <button class="edit-bio-btn">
-                                <i class="fas fa-pencil-alt"></i>
-                                Editar biografía
-                            </button>
+                            <div class="bio-actions">
+                                <button class="edit-bio-btn" id="edit-bio-btn" onclick="toggleBioEdit()">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    Editar biografía
+                                </button>
+                                <button class="save-bio-btn" id="save-bio-btn" onclick="saveBioEdit()" style="display: none;">
+                                    <i class="fas fa-save"></i>
+                                    Guardar
+                                </button>
+                                <button class="cancel-bio-btn" id="cancel-bio-btn" onclick="cancelBioEdit()" style="display: none;">
+                                    <i class="fas fa-times"></i>
+                                    Cancelar
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -236,5 +245,91 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript para editar biografía -->
+    <script>
+        let originalBio = '';
+
+        function toggleBioEdit() {
+            // Guardar el texto original
+            originalBio = document.getElementById('bio-content').textContent;
+
+            // Convertir el párrafo en un textarea editable
+            const bioContent = document.getElementById('bio-content');
+            bioContent.innerHTML = `<textarea class="bio-textarea" style="width: 100%; min-height: 120px; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: inherit; resize: vertical; line-height: 1.6;">${originalBio}</textarea>`;
+
+            // Mostrar botones de guardar y cancelar, ocultar botón de editar
+            document.getElementById('edit-bio-btn').style.display = 'none';
+            document.getElementById('save-bio-btn').style.display = 'inline-flex';
+            document.getElementById('cancel-bio-btn').style.display = 'inline-flex';
+        }
+
+        function saveBioEdit() {
+            // Obtener el texto del textarea
+            const textarea = document.querySelector('#bio-content textarea');
+
+            if (textarea) {
+                const newText = textarea.value;
+
+                // Convertir de vuelta a párrafo
+                document.getElementById('bio-content').innerHTML = newText;
+
+                // Mostrar mensaje de confirmación
+                showNotification('Biografía guardada exitosamente!', 'success');
+            }
+
+            // Restaurar botones
+            document.getElementById('edit-bio-btn').style.display = 'inline-flex';
+            document.getElementById('save-bio-btn').style.display = 'none';
+            document.getElementById('cancel-bio-btn').style.display = 'none';
+        }
+
+        function cancelBioEdit() {
+            // Restaurar texto original
+            document.getElementById('bio-content').innerHTML = originalBio;
+
+            // Restaurar botones
+            document.getElementById('edit-bio-btn').style.display = 'inline-flex';
+            document.getElementById('save-bio-btn').style.display = 'none';
+            document.getElementById('cancel-bio-btn').style.display = 'none';
+        }
+
+        function showNotification(message, type) {
+            // Crear notificación
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                background-color: ${type === 'success' ? '#4CAF50' : '#f44336'};
+                color: white;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                z-index: 1000;
+                font-weight: 500;
+                animation: slideIn 0.3s ease-out;
+            `;
+            notification.textContent = message;
+
+            // Agregar animación CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            document.body.appendChild(notification);
+
+            // Remover notificación después de 3 segundos
+            setTimeout(() => {
+                notification.remove();
+                style.remove();
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
