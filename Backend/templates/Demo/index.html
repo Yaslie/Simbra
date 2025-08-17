@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simbra - Demo Curso Interactivo</title>
+    <link rel="stylesheet" href="../../static/css/Demo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Simbra</h1>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/cursos">Mis cursos</a></li>
+                    <li><a href="/oportunidades">Oportunidades</a></li>
+                    <li><a href="/perfil" class="profile-btn">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="course-demo-container">
+            <div class="course-title">Curso Demo: Introducción a la Creatividad Digital</div>
+            <div class="lesson-progress" id="lesson-progress">Lección 1 de 6</div>
+            <!-- Lección 1 -->
+            <section class="lesson-step active" id="lesson-1">
+                <div class="lesson-title">Lección 1: ¿Qué es la creatividad digital?</div>
+                <div class="lesson-content">
+                    La creatividad digital es la habilidad de utilizar herramientas tecnológicas para expresar ideas, resolver problemas y crear contenido innovador. 
+                    <br><br>
+                    A lo largo de la historia, la creatividad ha sido fundamental para el desarrollo humano. Hoy, la tecnología nos permite explorar nuevas formas de expresión y colaboración. 
+                    <br><br>
+                    <strong>Temas clave:</strong>
+                    <ul>
+                        <li>Definición de creatividad digital</li>
+                        <li>Importancia en la vida cotidiana y profesional</li>
+                        <li>Ejemplos de creatividad digital en diferentes áreas: arte, educación, negocios, ciencia</li>
+                    </ul>
+                    <strong>Lectura recomendada:</strong> 
+                    <ul>
+                        <li>Artículo: "La creatividad en la era digital" (3 páginas)</li>
+                        <li>Estudio de caso: "Cómo la creatividad digital transformó una comunidad escolar"</li>
+                    </ul>
+                    <strong>Ejemplo práctico:</strong> 
+                    <ul>
+                        <li>Diseñar una imagen digital para una campaña social</li>
+                        <li>Crear una historia interactiva usando una app gratuita</li>
+                    </ul>
+                </div>
+                <div class="quiz-block">
+                    <div><strong>Quiz (Opción múltiple):</strong> ¿Cuál de estas opciones es un ejemplo de creatividad digital?</div>
+                    <label><input type="radio" name="quiz1" value="a"> Pintar un cuadro con acuarelas</label>
+                    <label><input type="radio" name="quiz1" value="b"> Crear una animación en la computadora</label>
+                    <label><input type="radio" name="quiz1" value="c"> Leer un libro impreso</label>
+                    <div class="quiz-feedback" id="feedback-1"></div>
+                </div>
+                <div class="lesson-nav">
+                    <button disabled>Anterior</button>
+                    <button onclick="nextLesson()">Siguiente</button>
+                </div>
+            </section>
+            <!-- Lección 2 -->
+            <section class="lesson-step" id="lesson-2">
+                <div class="lesson-title">Lección 2: Herramientas básicas para la creatividad digital</div>
+                <div class="lesson-content">
+                    Existen muchas herramientas digitales para crear: editores de imágenes, procesadores de texto, aplicaciones de presentaciones, plataformas de colaboración y más.
+                    <br><br>
+                    <strong>Herramientas populares:</strong>
+                    <ul>
+                        <li>Canva: Diseño gráfico fácil y rápido</li>
+                        <li>Google Docs: Escritura y colaboración en línea</li>
+                        <li>PowerPoint: Presentaciones visuales</li>
+                        <li>Scratch: Programación creativa para principiantes</li>
+                        <li>Padlet: Muro colaborativo digital</li>
+                    </ul>
+                    <strong>Actividad:</strong> 
+                    <ul>
+                        <li>Explora al menos dos de estas herramientas y crea un pequeño proyecto en cada una.</li>
+                    </ul>
+                    <strong>Lectura recomendada:</strong>
+                    <ul>
+                        <li>Guía: "Primeros pasos en Canva y Google Docs" (5 páginas)</li>
+                    </ul>
+                </div>
+                <div class="quiz-block">
+                    <div><strong>Quiz (Verdadero/Falso):</strong> Canva es una herramienta digital para crear diseños gráficos fácilmente.</div>
+                    <label><input type="radio" name="quiz2" value="verdadero"> Verdadero</label>
+                    <label><input type="radio" name="quiz2" value="falso"> Falso</label>
+                    <div class="quiz-feedback" id="feedback-2"></div>
+                </div>
+                <div class="lesson-nav">
+                    <button onclick="prevLesson()">Anterior</button>
+                    <button onclick="nextLesson()">Siguiente</button>
+                </div>
+            </section>
+            <!-- Lección 3 -->
+            <section class="lesson-step" id="lesson-3">
+                <div class="lesson-title">Lección 3: Pensamiento creativo y resolución de problemas</div>
+                <div class="lesson-content">
+                    El pensamiento creativo consiste en buscar soluciones originales y diferentes a los problemas usando la tecnología como aliada.
+                    <br><br>
+                    <strong>Fases del pensamiento creativo:</strong>
+                    <ol>
+                        <li>Identificación del problema</li>
+                        <li>Generación de ideas</li>
+                        <li>Evaluación y selección de la mejor idea</li>
+                        <li>Implementación y revisión</li>
+                    </ol>
+                    <strong>Ejemplo:</strong> 
+                    <ul>
+                        <li>Crear una app para organizar tareas escolares</li>
+                        <li>Diseñar un logo para un proyecto personal</li>
+                    </ul>
+                    <strong>Lectura recomendada:</strong>
+                    <ul>
+                        <li>Artículo: "Cómo estimular el pensamiento creativo en jóvenes" (4 páginas)</li>
+                    </ul>
+                </div>
+                <div class="quiz-block">
+                    <div><strong>Quiz (Relaciona):</strong> Relaciona cada fase del pensamiento creativo con su descripción.</div>
+                    <div class="match-list">
+                        <div class="match-col">
+                            <strong>Fase</strong>
+                            <div>1. Identificación</div>
+                            <div>2. Generación</div>
+                            <div>3. Evaluación</div>
+                            <div>4. Implementación</div>
+                        </div>
+                        <div class="match-col">
+                            <strong>Descripción</strong>
+                            <select id="match-1">
+                                <option value="">Selecciona...</option>
+                                <option value="a">Buscar ideas posibles</option>
+                                <option value="b">Detectar el problema</option>
+                                <option value="c">Poner en práctica la solución</option>
+                                <option value="d">Elegir la mejor idea</option>
+                            </select>
+                            <select id="match-2">
+                                <option value="">Selecciona...</option>
+                                <option value="a">Buscar ideas posibles</option>
+                                <option value="b">Detectar el problema</option>
+                                <option value="c">Poner en práctica la solución</option>
+                                <option value="d">Elegir la mejor idea</option>
+                            </select>
+                            <select id="match-3">
+                                <option value="">Selecciona...</option>
+                                <option value="a">Buscar ideas posibles</option>
+                                <option value="b">Detectar el problema</option>
+                                <option value="c">Poner en práctica la solución</option>
+                                <option value="d">Elegir la mejor idea</option>
+                            </select>
+                            <select id="match-4">
+                                <option value="">Selecciona...</option>
+                                <option value="a">Buscar ideas posibles</option>
+                                <option value="b">Detectar el problema</option>
+                                <option value="c">Poner en práctica la solución</option>
+                                <option value="d">Elegir la mejor idea</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button onclick="checkMatchQuiz()" style="margin-top:0.5rem;">Comprobar</button>
+                    <div class="quiz-feedback" id="feedback-3"></div>
+                </div>
+                <div class="lesson-nav">
+                    <button onclick="prevLesson()">Anterior</button>
+                    <button onclick="nextLesson()">Siguiente</button>
+                </div>
+            </section>
+            <!-- Lección 4 -->
+            <section class="lesson-step" id="lesson-4">
+                <div class="lesson-title">Lección 4: Creando tu primer proyecto digital</div>
+                <div class="lesson-content">
+                    ¡Hora de crear! Piensa en una idea sencilla y usa una herramienta digital para darle forma. Puede ser un póster, una historia o una presentación.
+                    <br><br>
+                    <strong>Paso a paso:</strong>
+                    <ol>
+                        <li>Define tu objetivo</li>
+                        <li>Elige la herramienta adecuada</li>
+                        <li>Haz un boceto o esquema</li>
+                        <li>Desarrolla tu proyecto digital</li>
+                        <li>Revisa y mejora tu trabajo</li>
+                    </ol>
+                    <strong>Consejos:</strong>
+                    <ul>
+                        <li>Empieza con algo pequeño y diviértete experimentando</li>
+                        <li>No temas equivocarte, cada error es una oportunidad de aprender</li>
+                        <li>Pide retroalimentación a tus compañeros o profesores</li>
+                    </ul>
+                    <strong>Lectura recomendada:</strong>
+                    <ul>
+                        <li>Guía: "Cómo planificar y ejecutar proyectos digitales" (6 páginas)</li>
+                    </ul>
+                </div>
+                <div class="quiz-block">
+                    <div><strong>Quiz (Completa el espacio):</strong> Completa la frase: <br>
+                    "Antes de empezar un proyecto digital, es importante definir el ________ que quiero lograr."</div>
+                    <input type="text" id="fill-blank-4" class="fill-in" placeholder="Tu respuesta">
+                    <button onclick="checkFillBlankQuiz()" style="margin-left:0.5rem;">Comprobar</button>
+                    <div class="quiz-feedback" id="feedback-4"></div>
+                </div>
+                <div class="lesson-nav">
+                    <button onclick="prevLesson()">Anterior</button>
+                    <button onclick="nextLesson()">Siguiente</button>
+                </div>
+            </section>
+            <!-- Lección 5 -->
+            <section class="lesson-step" id="lesson-5">
+                <div class="lesson-title">Lección 5: Compartiendo y recibiendo retroalimentación</div>
+                <div class="lesson-content">
+                    Compartir tu trabajo digital te ayuda a mejorar. Escucha sugerencias y usa los comentarios para crecer.
+                    <br><br>
+                    <strong>Formas de compartir:</strong>
+                    <ul>
+                        <li>Publicar en redes sociales educativas</li>
+                        <li>Presentar tu proyecto en clase</li>
+                        <li>Enviar tu trabajo a un mentor o experto</li>
+                    </ul>
+                    <strong>Cómo recibir retroalimentación:</strong>
+                    <ul>
+                        <li>Escucha con mente abierta</li>
+                        <li>Pregunta cómo puedes mejorar</li>
+                        <li>No tomes las críticas como algo personal</li>
+                    </ul>
+                    <strong>Lectura recomendada:</strong>
+                    <ul>
+                        <li>Artículo: "La importancia de la retroalimentación en el aprendizaje digital" (3 páginas)</li>
+                    </ul>
+                </div>
+                <div class="quiz-block">
+                    <div><strong>Quiz (Selección múltiple):</strong> ¿Por qué es útil compartir tu trabajo digital? (Selecciona todas las que apliquen)</div>
+                    <label><input type="checkbox" name="quiz5" value="a"> Para recibir retroalimentación</label>
+                    <label><input type="checkbox" name="quiz5" value="b"> Para que otros lo copien</label>
+                    <label><input type="checkbox" name="quiz5" value="c"> Para aprender y mejorar</label>
+                    <label><input type="checkbox" name="quiz5" value="d"> Para no aprender nada nuevo</label>
+                    <button onclick="checkMultiQuiz()" style="margin-top:0.5rem;">Comprobar</button>
+                    <div class="quiz-feedback" id="feedback-5"></div>
+                </div>
+                <div class="lesson-nav">
+                    <button onclick="prevLesson()">Anterior</button>
+                    <button onclick="nextLesson()">Siguiente</button>
+                </div>
+            </section>
+            <!-- Lección 6 -->
+            <section class="lesson-step" id="lesson-6">
+                <div class="lesson-title">Lección 6: ¡Sigue practicando!</div>
+                <div class="lesson-content">
+                    La creatividad digital mejora con la práctica. Intenta nuevos proyectos, explora diferentes herramientas y nunca dejes de aprender.
+                    <br><br>
+                    <strong>Ideas para seguir practicando:</strong>
+                    <ul>
+                        <li>Participa en retos creativos en línea</li>
+                        <li>Colabora con otros estudiantes en proyectos digitales</li>
+                        <li>Aprende una nueva herramienta cada mes</li>
+                        <li>Comparte tus logros y reflexiona sobre tu progreso</li>
+                    </ul>
+                    <strong>Lectura recomendada:</strong>
+                    <ul>
+                        <li>Artículo: "Cómo mantener la motivación en el aprendizaje digital" (2 páginas)</li>
+                    </ul>
+                    <br>
+                    ¡Felicitaciones por completar el curso demo!
+                </div>
+                <div class="quiz-block">
+                    <div><strong>Quiz (Opción múltiple):</strong> ¿Cómo puedes mejorar tu creatividad digital?</div>
+                    <label><input type="radio" name="quiz6" value="a"> Dejando de practicar</label>
+                    <label><input type="radio" name="quiz6" value="b"> Probando cosas nuevas y practicando</label>
+                    <label><input type="radio" name="quiz6" value="c"> No usando herramientas digitales</label>
+                    <div class="quiz-feedback" id="feedback-6"></div>
+                </div>
+                <div class="lesson-nav">
+                    <button onclick="prevLesson()">Anterior</button>
+                    <button disabled>Finalizar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Simbra</h3>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2023 Simbra. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS para navegación y quizzes -->
+    <script>
+        let currentLesson = 1;
+        const totalLessons = 6;
+
+        function showLesson(n) {
+            for (let i = 1; i <= totalLessons; i++) {
+                document.getElementById('lesson-' + i).classList.remove('active');
+            }
+            document.getElementById('lesson-' + n).classList.add('active');
+            document.getElementById('lesson-progress').textContent = `Lección ${n} de ${totalLessons}`;
+            currentLesson = n;
+        }
+
+        function nextLesson() {
+            if (currentLesson < totalLessons) {
+                showLesson(currentLesson + 1);
+            }
+        }
+
+        function prevLesson() {
+            if (currentLesson > 1) {
+                showLesson(currentLesson - 1);
+            }
+        }
+
+        // Quiz 1: opción múltiple
+        document.querySelectorAll('input[name="quiz1"]').forEach(input => {
+            input.addEventListener('change', function() {
+                const feedback = document.getElementById('feedback-1');
+                if (this.value === 'b') {
+                    feedback.textContent = "¡Correcto!";
+                    feedback.className = "quiz-feedback correct";
+                } else {
+                    feedback.textContent = "Incorrecto, intenta de nuevo.";
+                    feedback.className = "quiz-feedback incorrect";
+                }
+            });
+        });
+
+        // Quiz 2: verdadero/falso
+        document.querySelectorAll('input[name="quiz2"]').forEach(input => {
+            input.addEventListener('change', function() {
+                const feedback = document.getElementById('feedback-2');
+                if (this.value === 'verdadero') {
+                    feedback.textContent = "¡Correcto!";
+                    feedback.className = "quiz-feedback correct";
+                } else {
+                    feedback.textContent = "Incorrecto, Canva sí es una herramienta digital para crear diseños gráficos.";
+                    feedback.className = "quiz-feedback incorrect";
+                }
+            });
+        });
+
+        // Quiz 3: relacionar
+        function checkMatchQuiz() {
+            const answers = [
+                document.getElementById('match-1').value,
+                document.getElementById('match-2').value,
+                document.getElementById('match-3').value,
+                document.getElementById('match-4').value
+            ];
+            // 1: b, 2: a, 3: d, 4: c
+            const correct = ['b','a','d','c'];
+            const feedback = document.getElementById('feedback-3');
+            if (JSON.stringify(answers) === JSON.stringify(correct)) {
+                feedback.textContent = "¡Correcto! Has relacionado bien las fases.";
+                feedback.className = "quiz-feedback correct";
+            } else {
+                feedback.textContent = "Algunas relaciones son incorrectas. Intenta de nuevo.";
+                feedback.className = "quiz-feedback incorrect";
+            }
+        }
+
+        // Quiz 4: completar espacio
+        function checkFillBlankQuiz() {
+            const val = document.getElementById('fill-blank-4').value.trim().toLowerCase();
+            const feedback = document.getElementById('feedback-4');
+            if (val === "objetivo") {
+                feedback.textContent = "¡Correcto!";
+                feedback.className = "quiz-feedback correct";
+            } else {
+                feedback.textContent = "Incorrecto. La respuesta es 'objetivo'.";
+                feedback.className = "quiz-feedback incorrect";
+            }
+        }
+
+        // Quiz 5: selección múltiple
+        function checkMultiQuiz() {
+            const checks = Array.from(document.querySelectorAll('input[name="quiz5"]:checked')).map(cb => cb.value).sort();
+            const feedback = document.getElementById('feedback-5');
+            const correct = ['a','c'];
+            if (JSON.stringify(checks) === JSON.stringify(correct)) {
+                feedback.textContent = "¡Correcto! Compartir sirve para recibir retroalimentación y aprender.";
+                feedback.className = "quiz-feedback correct";
+            } else {
+                feedback.textContent = "No es correcto. Marca solo las opciones que realmente aplican.";
+                feedback.className = "quiz-feedback incorrect";
+            }
+        }
+
+        // Quiz 6: opción múltiple
+        document.querySelectorAll('input[name="quiz6"]').forEach(input => {
+            input.addEventListener('change', function() {
+                const feedback = document.getElementById('feedback-6');
+                if (this.value === 'b') {
+                    feedback.textContent = "¡Correcto!";
+                    feedback.className = "quiz-feedback correct";
+                } else {
+                    feedback.textContent = "Incorrecto. Practicar y probar cosas nuevas es la clave.";
+                    feedback.className = "quiz-feedback incorrect";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
