@@ -37,14 +37,14 @@
                     <h3 class="hero-subtitle">Oportunidades</h3>
                     <h2 class="hero-title">El talento florece con apoyo</h2>
                     <p class="hero-description">Te presentamos las distintas opciones de apoyo a tu carrera disponibles especialmente para ti, según tu perfil.</p>
-                    <button class="cta-button">Vamos ahí</button>
+                    <a href="#oportunidades-section" class="cta-button">Vamos ahí</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Solo para ti Section -->
-    <section class="opportunities-section">
+    <section class="opportunities-section" id="oportunidades-section">
         <div class="container">
             <h2 class="section-title">Solo para ti</h2>
             <div class="opportunities-grid">
@@ -155,5 +155,33 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript para scroll suave mejorado -->
+    <script>
+        // Función para scroll suave mejorado
+        function smoothScrollTo(targetId) {
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                });
+            }
+        }
+
+        // Agregar evento click a todos los enlaces internos
+        document.addEventListener('DOMContentLoaded', function() {
+            const internalLinks = document.querySelectorAll('a[href^="#"]');
+            
+            internalLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    smoothScrollTo(targetId);
+                });
+            });
+        });
+    </script>
 </body>
 </html>

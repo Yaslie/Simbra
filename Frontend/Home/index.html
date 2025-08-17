@@ -17,7 +17,7 @@
             </div>
             <nav class="navigation">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#home-section" class="active">Home</a></li>
                     <li><a href="../Cursos/index.html">Mis cursos</a></li>
                     <li><a href="../Oportunidades/index.html">Oportunidades</a></li>
                     <li><a href="../Perfil/index.html" class="profile-btn">Perfil</a></li>
@@ -27,12 +27,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home-section">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
                     <h2>Bienvenido</h2>
-                    <a href="#" class="cta-link">Comenzar -></a>
+                    <a href="#base-firme-futuro" class="cta-link">Comenzar -></a>
                 </div>
                 <div class="hero-illustration">
                     <img src="../img/gato-bienvenida.png" alt="Mascota simbra" width="900rem" height="900rem">
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="simbra-header">
                 <h2>SIMBRA</h2>
-                <p>La base firme de tu futuro.</p>
+                <p id="base-firme-futuro">La base firme de tu futuro.</p>
             </div>
             <div class="cards-container">
                 <div class="info-card">
@@ -146,5 +146,41 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript para scroll suave mejorado -->
+    <script>
+        // Función para scroll suave mejorado
+        function smoothScrollTo(targetId) {
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                    inline: 'nearest'
+                });
+                
+                // Agregar efecto de resaltado
+                setTimeout(() => {
+                    target.style.animation = 'highlightTarget 1s ease-in-out';
+                    setTimeout(() => {
+                        target.style.animation = '';
+                    }, 1000);
+                }, 500);
+            }
+        }
+
+        // Agregar evento click a todos los enlaces internos
+        document.addEventListener('DOMContentLoaded', function() {
+            const internalLinks = document.querySelectorAll('a[href^="#"]');
+            
+            internalLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    smoothScrollTo(targetId);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
