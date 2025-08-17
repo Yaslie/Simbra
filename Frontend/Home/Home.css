@@ -78,8 +78,9 @@ body {
 .hero {
     background-color: #294655;
     color: #fff;
-    min-height: 40rem;
-    margin-top:-10rem ;
+    min-height: 50rem;
+    margin-top: -10rem;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -88,6 +89,7 @@ body {
     align-items: center;
     gap: 0rem;
     height: 100%;
+    min-height: 40rem;
 }
 
 
@@ -96,6 +98,7 @@ body {
     font-weight: 700;
     margin-bottom: 2rem;
     line-height: 1.1;
+    margin-top: 15rem;
 }
 
 .cta-link {
@@ -110,6 +113,20 @@ body {
 
 .cta-link:hover {
     opacity: 0.8;
+}
+
+.hero-illustration {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-illustration img {
+    max-height: 50rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -139,6 +156,7 @@ body {
     gap: 4rem;
     max-width: 120rem;
     margin: 0 auto;
+    min-height: 20rem;
 }
 
 .barra-separadora {
@@ -385,34 +403,52 @@ body {
     .hero-content {
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
     }
     
-    .cat-outline {
-        width: 15rem;
-        height: 15rem;
+    .hero-text h2 {
+        font-size: 4rem;
+    }
+    
+    .hero-illustration img {
+        max-height: 25rem;
     }
     
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 80rem;
     }
     
     .mission-content {
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
     }
     
     .differences-content {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 2rem;
     }
 }
 
 @media (max-width: 48rem) {
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-    
     .hero-text h2 {
         font-size: 3rem;
+    }
+    
+    .hero-illustration img {
+        max-height: 20rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 60rem;
     }
     
     .simbra-header h2 {
@@ -423,9 +459,17 @@ body {
         font-size: 2.5rem;
     }
     
+    .differences-content {
+        gap: 1rem;
+    }
+    
     .footer-content {
         flex-direction: column;
         gap: 2rem;
         text-align: center;
+    }
+    
+    .container {
+        padding: 0 1rem;
     }
 }
