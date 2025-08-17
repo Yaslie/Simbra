@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff;
@@ -417,7 +417,7 @@ body {
 }
 
 .stats-container {
-    background-color: #0d9488;
+    background-color: #294655;
     border-radius: 1rem;
     padding: 3rem 2rem;
     display: flex;
@@ -454,7 +454,7 @@ body {
 }
 
 .motivation {
-    color: #0d9488 !important;
+    color: #294655 !important;
     font-weight: 600;
 }
 
@@ -473,7 +473,7 @@ body {
 
 .interests li::before {
     content: '•';
-    color: #0d9488;
+    color: #294655;
     position: absolute;
     left: 0;
 }
@@ -513,7 +513,7 @@ body {
     position: absolute;
     width: 8rem;
     height: 8rem;
-    background-color: #0d9488;
+    background-color: #294655;
     border-radius: 50%;
 }
 
@@ -546,7 +546,8 @@ body {
 }
 
 .skill-btn {
-    background-color: #0d9488;
+    background-color: #294655;
+    color: #fff;
     color: #fff;
     border: none;
     padding: 1rem 1.5rem;
@@ -558,7 +559,7 @@ body {
 }
 
 .skill-btn:hover {
-    background-color: #0f766e;
+    background-color: #1e3a4a;
 }
 
 .skills-note {
@@ -765,7 +766,7 @@ body {
 .cap-base {
     width: 2.5rem;
     height: 1rem;
-    background-color: #0d9488;
+    background-color: #294655;
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -786,7 +787,7 @@ body {
 }
 
 .learn-more {
-    color: #0d9488;
+    color: #294655;
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 600;
@@ -794,7 +795,7 @@ body {
 }
 
 .learn-more:hover {
-    color: #0f766e;
+    color: #1e3a4a;
 }
 
 /* Footer */
