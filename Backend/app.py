@@ -22,5 +22,9 @@ def perfil():
 def miscursos():
     return render_template("MisCursos/index.html")
 
+@app.route("/demo")
+def demo():
+    return render_template ("Demo/index.html")
+
 if __name__ == "__main__":
     app.run(debug=True, host="127.0.0.1", port=5000)

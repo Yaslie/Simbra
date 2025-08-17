@@ -18,17 +18,17 @@
             </div>
             <nav class="navigation">
                 <ul>
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/cursos">Mis cursos</a></li>
-                    <li><a href="/oportunidades">Oportunidades</a></li>
-                    <li><a href="/perfil" class="profile-btn">Perfil</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{{url_for('miscursos')}}#inicio-cursos">Mis cursos</a></li>
+                    <li><a href="{{url_for('oportunidades')}}#inicio-oportunidades">Oportunidades</a></li>
+                    <li><a href="{{url_for('perfil')}}#inicio-perfil class=" profile-btn">Perfil</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <div class="course-demo-container">
+        <div id="header" class="course-demo-container">
             <div class="course-title">Curso Demo: Introducción a la Creatividad Digital</div>
             <div class="lesson-progress" id="lesson-progress">Lección 1 de 6</div>
             <!-- Lección 1 -->
